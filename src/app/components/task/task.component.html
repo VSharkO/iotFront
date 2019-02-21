@@ -1,0 +1,21 @@
+<h1>ROOMMATE PROTECTOR SETTINGS</h1>
+
+<div class="tasksEntry">
+  <p>Enter your message below:</p>
+  <form id="enter" (submit)="changeMessage(message.value)">
+    <div>
+      <input name="vrbabox" type="text" #message [(ngModel)]="textboxVariable">
+      <button id="gumb" type="reset" (click)="changeMessage(message.value)">Add</button>
+    </div>
+  </form>
+</div>
+
+<div class="statusIf">
+  <p>Is protection active: </p>
+  <input type="checkbox" (change)="toggle()" [(ngModel)]="changeBox" [value]="changeBox">
+</div>
+<div>
+  <p>Current Message: </p>
+  <p class="current">{{currentMessage}}</p>
+</div>
+
